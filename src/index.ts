@@ -3,6 +3,7 @@ import { GoogleCalendarMcpServer } from './server.js';
 import { parseArgs } from './config/TransportConfig.js';
 import { readFileSync } from "fs";
 import { join, dirname } from "path";
+import express from "express";   // 👈 added Express import
 
 // Import modular components
 import { initializeOAuth2Client } from './auth/client.js';
