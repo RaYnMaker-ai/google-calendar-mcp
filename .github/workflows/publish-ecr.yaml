@@ -59,7 +59,7 @@ jobs:
         run: |
           echo "🚀 Building and pushing image: $VERSION"
 
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$VERSION .
+          docker build --no-cache -t $ECR_REGISTRY/$ECR_REPOSITORY:$VERSION .
 
           if [ "$RELEASE_BUILD" = "true" ]; then
             echo "📦 Pushing versioned and latest tags..."
